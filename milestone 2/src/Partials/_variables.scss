@@ -1,0 +1,17 @@
+@mixin SectionDimension ($w, $h) {
+    width: $w;
+    height: $h;
+};
+
+@mixin Font ($dimension, $weight) {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: $dimension;
+    font-weight: $weight;
+};
+
+$colorPalette: (
+    "body": rgb(25,25,25),
+    "navbar": black,
+    "text": white,
+    "author":grey
+);

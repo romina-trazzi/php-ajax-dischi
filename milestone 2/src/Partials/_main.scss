@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    justify-content: center;
+
+    & .box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+        & .disc {
+            @for $i from 1 to 9 {
+                background-color: map-get($colorPalette, navbar);
+                color: map-get($colorPalette, text);
+                margin: 50px;
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            & img {
+                height: 200px;
+                width: 200px;
+            }
+            
+            & .title {
+                @include Font(17px, 600);
+                padding: 10px;
+            }
+            
+            & .author {
+                @include Font(14px, 300);
+                color: map-get($colorPalette, author);
+            }
+
+            & .year {
+                @include Font(14px, 300); 
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    @include SectionDimension(100%, 100px);
+    background-color: map-get($colorPalette, navbar);
+    & img {
+        height: 100px;
+        padding-left: 20%;
+    }   
+}
+
+body {
+    background-color: map-get($colorPalette, body);
+}
+
+
+main {
+    @include SectionDimension(100%, auto);
+    background-color: map-get($colorPalette, body);
+}
+
+.container {
+    width: 100vw;
+    height: calc(100% - 100px);
+}
+
+
